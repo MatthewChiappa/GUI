@@ -19,14 +19,14 @@ class GUI
   # Else, skip filling in one of the text boxes for the negative case
   def fill_with_data(valid_data)
     # Enter text for name field
-    nameText = @driver.find_element(:class, 'ss-q-short')
-    nameText.send_keys('Test Name')
+    name_text = @driver.find_element(:class, 'ss-q-short')
+    name_text.send_keys('Test Name')
 
     # If positive test case is being generated, check a radio button
     # Else, skip over required field and generate error message
     if valid_data
-      radioYes = @driver.find_element(:class, 'ss-q-checkbox')
-      radioYes.click
+      radio_yes = @driver.find_element(:class, 'ss-q-checkbox')
+      radio_yes.click
     end
 
     # Get dropdown list, get all the options from the dropdown, and
